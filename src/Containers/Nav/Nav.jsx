@@ -6,14 +6,14 @@ import FilterList from "../../Components/FilterList/FilterList";
 
 const Nav = () => {
   return (
-    <>
+    <div className="navBar">
     <div>Nav
         <SearchBox />
     </div>
     <div>
         <FilterList />
     </div>
-    </>
+    </div>
   )
 }
 

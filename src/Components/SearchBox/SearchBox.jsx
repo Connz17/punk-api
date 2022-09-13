@@ -4,7 +4,9 @@ import React from 'react'
 
 const SearchBox = () => {
   return (
-    <div>SearchBox</div>
+    <div>
+      <input type="text" placeholder="Beer name"/>
+    </div>
   )
 }
 

@@ -3,10 +3,13 @@ import "./Main.scss";
 import React from 'react'
 import CardList from "../../Components/CardList/CardList";
 
-const Main = () => {
+const Main = ({getBeer, beers}) => {
+
+
+
   return (
-    <div>Main
-        <CardList />
+    <div className="main" onLoad={getBeer}>Main
+        <CardList beers={beers}/>
     </div>
   )
 }

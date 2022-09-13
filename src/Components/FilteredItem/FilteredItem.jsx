@@ -2,9 +2,9 @@ import "./FilteredItem.scss"
 
 import React from 'react'
 
-const FilteredItem = () => {
+const FilteredItem = ({filterTerm}) => {
   return (
-    <div>FilteredItem</div>
+    <div>{filterTerm}</div>
   )
 }
 
