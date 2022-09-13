@@ -8,7 +8,7 @@ const Main = ({getBeer, beers}) => {
 
 
   return (
-    <div className="main" onLoad={getBeer}>Main
+    <div className="main" onLoad={getBeer()}>Main
         <CardList beers={beers}/>
     </div>
   )

@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import Main from './Containers/Main/Main';
 import Nav from './Containers/Nav/Nav';
@@ -16,7 +15,7 @@ console.log(data);
   }
 
 
-getBeer()
+
 
 
   // const brewDog =  
@@ -26,7 +25,7 @@ getBeer()
   return (
     <div className="App">
       <header className='title'>BrewDog</header>
-      <Nav getBeer={getBeer}/>
+      <Nav beers={beers}/>
       <Main getBeer={getBeer}  beers={beers}/>      
     </div>
   );

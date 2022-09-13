@@ -8,7 +8,7 @@ import FilteredItem from "../FilteredItem/FilteredItem";
 
 const FilterList = () => {
   return (
-    <div>FilterList
+    <div>
         <FilteredItem filterTerm={"ABV%"}/>
         <FilteredItem filterTerm={"pH"}/>
         <FilteredItem filterTerm={"Brew Date"}/>
