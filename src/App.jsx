@@ -10,6 +10,7 @@ function App() {
   const [beers, setBeers] = useState([])
   const [abvArr, setAbvArr] = useState([])
   const [searchTerm, setSearchTerm] = useState("");
+  const [abvValue, setAbvValue] = useState(14);
 
 
   const getBeer = async () => {
@@ -21,7 +22,7 @@ console.log(data);
 
 //use slider to get and set value of ABV percentage
   const getHighABV = async () => {
-    const res = await fetch("https://api.punkapi.com/v2/beers?abv_gt=14");
+    const res = await fetch(`https://api.punkapi.com/v2/beers?abv_gt=${abvValue}`);
     const data = await res.json();
     setAbvArr(data);
     console.log(data);
@@ -37,7 +38,7 @@ console.log(data);
   useEffect(() => {
     getBeer();
     getHighABV();
-  },[])
+  },[abvValue])
 
 
 
@@ -52,6 +53,9 @@ const searchedBeer = beers.filter((beer)=>{
   return beerName.includes(searchTerm);
 })
 
+const getAbvValue = (event) => {
+  setAbvValue(event.target.value);
+}
 
 
   return (
@@ -67,7 +71,7 @@ const searchedBeer = beers.filter((beer)=>{
       ></Route>
       <Route path="/ABV"
       element={
-        <SortedMain beers={sortedABV}/>
+        <SortedMain term={"% ABV and above"} getSliderValue={getAbvValue} beers={sortedABV} sliderValue={abvValue}/>
       }
       ></Route>
       <Route path="/pH"
