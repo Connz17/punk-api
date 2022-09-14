@@ -3,13 +3,13 @@ import "./Main.scss";
 import React from 'react'
 import CardList from "../../Components/CardList/CardList";
 
-const Main = ({getBeer, beers}) => {
+const Main = ({beers, searchedBeer}) => {
 
 
 
   return (
-    <div className="main" onLoad={getBeer()}>Main
-        <CardList beers={beers}/>
+    <div className="main" >Main
+        <CardList beers={beers} searchedBeer={searchedBeer}/>
     </div>
   )
 }

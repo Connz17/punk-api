@@ -5,19 +5,12 @@ import SearchBox from "../../Components/SearchBox/SearchBox";
 import FilterList from "../../Components/FilterList/FilterList";
 
 
-const Nav = ({beers}) => {
-    const [searchTerm, setSearchTerm] = useState("");
+const Nav = ({beers, handleInput, searchedBeer}) => {
     const [showFilter, setShowFilter] = useState(false);
 
-    const handleInput = (event) => {
-        const userInput = event.target.value.toLowerCase();
-        setSearchTerm(userInput);
-    };
 
-    const searchedBeer = beers.filter((beer)=>{
-        const beerName = beer.name.toLowerCase();
-        return beerName.includes(searchTerm) && beer.image_url;
-    })
+
+
 
     const toggleFilter = () => {
         setShowFilter(!showFilter);
@@ -28,7 +21,7 @@ const Nav = ({beers}) => {
   return (
     <div className="navBar">
     <div>
-        <SearchBox searchTerm={searchTerm} handleInput={handleInput} searchedBeer={searchedBeer}/>
+        <SearchBox handleInput={handleInput} searchedBeer={searchedBeer}/>
     </div>
     <div>
         <h2 onClick={toggleFilter}>Filters</h2>
