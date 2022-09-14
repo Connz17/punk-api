@@ -11,7 +11,7 @@ const SearchBox = ({handleInput, searchedBeer}) => {
   return (
   <>
     <div>
-      <label for="input">Search: </label>
+      <label htmlFor="input">Search: </label>
       <input type="text" placeholder="Beer name..."
       // onFocus={handleList}
       onInput={handleInput}/>

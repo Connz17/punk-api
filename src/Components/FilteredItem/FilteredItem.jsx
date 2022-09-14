@@ -2,9 +2,11 @@ import "./FilteredItem.scss"
 
 import React from 'react'
 
-const FilteredItem = ({filterTerm}) => {
+const FilteredItem = ({filterTerm, toggleFilter}) => {
   return (
-    <div>{filterTerm}</div>
+    <div className="filters">
+      <h3 onClick={toggleFilter}>{filterTerm}</h3>  
+    </div>
   )
 }
 
