@@ -42,14 +42,11 @@ function App() {
 
   const sortedDate = brewDateArr.filter((drink)=> drink.image_url).sort((a, b) => a.first_brewed - b.first_brewed)
 
-
-
   useEffect(() => {
     getBeer();
     getHighABV();
     getBrewDate();
   },[abvValue, brewDateValue])
-
 
 
   const handleInput = (event) => {
@@ -58,6 +55,21 @@ function App() {
 };
 
 const searchedBeer = beers.filter((beer)=>{
+  const beerName = beer.name.toLowerCase();
+  return beerName.includes(searchTerm);
+})
+
+const searchedABV = sortedABV.filter((beer)=>{
+  const beerName = beer.name.toLowerCase();
+  return beerName.includes(searchTerm);
+})
+
+const searchedBrewDate = sortedDate.filter((beer)=>{
+  const beerName = beer.name.toLowerCase();
+  return beerName.includes(searchTerm);
+})
+
+const searchedPh = sortedPh.filter((beer)=>{
   const beerName = beer.name.toLowerCase();
   return beerName.includes(searchTerm);
 })
@@ -89,22 +101,22 @@ const getPhValue = (event) => {
       <Routes>
       <Route path="/beer/:beerId"
       element={
-        <BeerInfo beers={beers}/>
+        <BeerInfo beers={searchedBeer}/>
       }
       ></Route>
       <Route path="/ABV"
       element={
-        <ABVSortedMain term={"ABV of "} getSliderValue={getAbvValue} beers={sortedABV} sliderValue={abvValue}/>
+        <ABVSortedMain term={"ABV of "} getSliderValue={getAbvValue} beers={searchedABV} sliderValue={abvValue}/>
       }
       ></Route>
       <Route path="/pH"
       element={
-        <SortedMain getSliderValue={getPhValue} beers={sortedPh}/>
+        <SortedMain getSliderValue={getPhValue} beers={searchedPh}/>
       }
       ></Route>
       <Route path="/brewed"
       element={
-        <DateSortedMain term={"beers brewed before "} getSliderValue={getBrewDateValue} beers={sortedDate} sliderValue={brewDateValue}/>
+        <DateSortedMain term={"beers brewed before "} getSliderValue={getBrewDateValue} beers={searchedBrewDate} sliderValue={brewDateValue}/>
       }
       ></Route>
         <Route path="/"

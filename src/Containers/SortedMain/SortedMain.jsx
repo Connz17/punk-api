@@ -6,7 +6,7 @@ import Slider from "../../Components/Slider/Slider";
 
 
 
-const SortedMain = ({beers, getSliderValue, sliderValue, term}) => {
+const SortedMain = ({beers, getSliderValue, sliderValue, term,}) => {
   return (
     <div className="main">
         <h3>Currently showing {term}{sliderValue}</h3>

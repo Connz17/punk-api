@@ -1,16 +1,19 @@
 import "./BeerInfo.scss"
 import React from 'react'
-import { useParams } from "react-router"
+import { useParams } from "react-router";
 
 const BeerInfo = ({beers}) => {
+console.log(beers);
 
-const {beerId} = useParams()
+const {beerId} = useParams();
 console.log(beerId);
 
-console.log(beers[0]);
+const clickedBeer = beers.filter((beer) => beer.id == beerId)
+  
+console.log(clickedBeer);
 
-const clickedBeer = beers.filter((beer) => beer.id === beerId);
-console.log(clickedBeer[0]);
+
+
 
   return (
     <>
