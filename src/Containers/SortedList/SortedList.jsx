@@ -21,4 +21,5 @@ const sortedJSX = beers.map((beer, index)=> {
   )
 }
 
+
 export default SortedList

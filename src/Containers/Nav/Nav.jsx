@@ -24,7 +24,7 @@ const Nav = ({beers, handleInput, searchedBeer}) => {
         <SearchBox handleInput={handleInput} searchedBeer={searchedBeer}/>
     </div>
     <div>
-        <h2 onClick={toggleFilter}>Sort By:</h2>
+        <h2 onClick={toggleFilter}>Sort By Options:</h2>
         {showFilter && <FilterList toggleFilter={toggleFilter}/>}
     </div>
     </div>

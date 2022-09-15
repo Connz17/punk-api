@@ -5,47 +5,56 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import SortedMain from './Containers/SortedMain/SortedMain';
 import BeerInfo from './Containers/BeerInfo/BeerInfo';
+import DateSortedMain from './Containers/DateSortedMain/DateSortedMain';
+import ABVSortedMain from './Containers/ABVSortedMain/ABVSortedMain';
 
 function App() {
   const [beers, setBeers] = useState([])
   const [abvArr, setAbvArr] = useState([])
+  const [brewDateArr, setBrewDateArr] = useState([])
   const [searchTerm, setSearchTerm] = useState("");
   const [abvValue, setAbvValue] = useState(14);
+  const [brewDateValue, setBrewDateValue] = useState(2012);
+  const [phValue, setPhValue] = useState();
 
 
   const getBeer = async () => {
     const res = await fetch("https://api.punkapi.com/v2/beers");
     const data = await res.json();
     setBeers(data);
-console.log(data);
   }
-
 //use slider to get and set value of ABV percentage
   const getHighABV = async () => {
     const res = await fetch(`https://api.punkapi.com/v2/beers?abv_gt=${abvValue}`);
     const data = await res.json();
     setAbvArr(data);
-    console.log(data);
   }
+
+  const getBrewDate = async () => {
+    const res = await fetch(`https://api.punkapi.com/v2/beers?brewed_before=01-${brewDateValue}`);
+    const data = await res.json();
+    setBrewDateArr(data);
+  }
+
   const sortedABV = abvArr.filter((drink)=> drink.image_url).sort((a, b) => b.abv - a.abv)
 
   const sortedPh = beers.filter((drink)=> drink.image_url).sort((a, b) => b.ph - a.ph)
 
-  const sortedDate = beers.filter((drink)=> drink.image_url).sort((a, b) => a.first_brewed - b.first_brewed)
+  const sortedDate = brewDateArr.filter((drink)=> drink.image_url).sort((a, b) => a.first_brewed - b.first_brewed)
 
 
 
   useEffect(() => {
     getBeer();
     getHighABV();
-  },[abvValue])
+    getBrewDate();
+  },[abvValue, brewDateValue])
 
 
 
   const handleInput = (event) => {
     const userInput = event.target.value.toLowerCase();
     setSearchTerm(userInput);
-    console.log(searchTerm);
 };
 
 const searchedBeer = beers.filter((beer)=>{
@@ -53,8 +62,22 @@ const searchedBeer = beers.filter((beer)=>{
   return beerName.includes(searchTerm);
 })
 
+// const phBeer = sortedPh.filter((beer)=>{
+//   const beerPH = beer.ph * 10
+//   return beerPH.includes(phValue);
+// })
+
 const getAbvValue = (event) => {
   setAbvValue(event.target.value);
+}
+
+const getBrewDateValue = (event) => {
+  setBrewDateValue(event.target.value);
+}
+
+const getPhValue = (event) => {
+  setPhValue(event.target.value);
+  console.log(phValue);
 }
 
 
@@ -71,17 +94,17 @@ const getAbvValue = (event) => {
       ></Route>
       <Route path="/ABV"
       element={
-        <SortedMain term={"% ABV and above"} getSliderValue={getAbvValue} beers={sortedABV} sliderValue={abvValue}/>
+        <ABVSortedMain term={"ABV of "} getSliderValue={getAbvValue} beers={sortedABV} sliderValue={abvValue}/>
       }
       ></Route>
       <Route path="/pH"
       element={
-        <SortedMain beers={sortedPh}/>
+        <SortedMain getSliderValue={getPhValue} beers={sortedPh}/>
       }
       ></Route>
       <Route path="/brewed"
       element={
-        <SortedMain beers={sortedDate}/>
+        <DateSortedMain term={"beers brewed before "} getSliderValue={getBrewDateValue} beers={sortedDate} sliderValue={brewDateValue}/>
       }
       ></Route>
         <Route path="/"
