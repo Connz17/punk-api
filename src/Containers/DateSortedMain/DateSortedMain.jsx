@@ -6,12 +6,12 @@ import DateRangedSlider from "../../Components/DateRangedSlider/DateRangedSlider
 
 
 
-const DateSortedMain = ({beers, getSliderValue, sliderValue, term}) => {
+const DateSortedMain = ({beers, getSliderValue, sliderValue, term, handleUserSearch}) => {
   return (
     <div className="main">
         <h3>Currently showing {term}{sliderValue}</h3>
         <DateRangedSlider getSliderValue={getSliderValue}/>
-        <SortedList beers={beers}/>
+        <SortedList beers={beers} handleUserSearch={handleUserSearch}/>
     </div>
   )
 }

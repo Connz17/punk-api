@@ -12,7 +12,9 @@ function App() {
   const [beers, setBeers] = useState([])
   const [abvArr, setAbvArr] = useState([])
   const [brewDateArr, setBrewDateArr] = useState([])
+
   const [searchTerm, setSearchTerm] = useState("");
+
   const [abvValue, setAbvValue] = useState(14);
   const [brewDateValue, setBrewDateValue] = useState(2012);
   const [phValue, setPhValue] = useState();
@@ -31,34 +33,23 @@ function App() {
     setBeers(beerArray);
   }
 
+useEffect(() => {
+  allBeers();
+  },[])
 
-//use slider to get and set value of ABV percentage
-  const getHighABV = async () => {
-    const res = await fetch(`https://api.punkapi.com/v2/beers?abv_gt=${abvValue}`);
-    const data = await res.json();
-    setAbvArr(data);
-  }
-
-  const getBrewDate = async () => {
-    const res = await fetch(`https://api.punkapi.com/v2/beers?brewed_before=01-${brewDateValue}`);
-    const data = await res.json();
-    setBrewDateArr(data);
-  }
 
   // filter out beers with no image
   const beerArr = beers.filter((drink)=> drink.image_url)
 
-  const sortedABV = abvArr.filter((drink)=> drink.image_url).sort((a, b) => b.abv - a.abv)
 
-  const sortedPh = beerArr.filter((drink)=> drink.image_url).sort((a, b) => b.ph - a.ph)
+//sort beers
+  const sortedABV = beerArr.sort((a, b) => b.abv - a.abv)
 
-  const sortedDate = brewDateArr.filter((drink)=> drink.image_url).sort((a, b) => a.first_brewed - b.first_brewed)
+  const sortedPh = beerArr.sort((a, b) => b.ph - a.ph)
 
-  useEffect(() => {
-    getHighABV();
-    getBrewDate();
-    allBeers();
-  },[abvValue, brewDateValue])
+  const sortedDate = beerArr.filter((drink)=> drink.image_url).sort()
+
+
 
 
   const handleInput = (event) => {

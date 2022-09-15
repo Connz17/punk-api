@@ -11,7 +11,6 @@ const CardList = ({searchedBeer}) => {
       <div key={index}>
         <Card beer={beer} ph={beer.ph} name={beer.name} tag={beer.tagline} pic={beer.image_url} abv={beer.abv} ibu={beer.ibu}/>
       </div>
-       
     )
 }) 
 
