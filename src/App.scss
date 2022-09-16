@@ -5,6 +5,8 @@
 
 .App {
   text-align: center;
+  background: rgb(112,90,238);
+  background: linear-gradient(216deg, rgba(112,90,238,1) 10%, rgba(81,143,213,1) 50%, rgba(2,8,164,1) 90%);
 }
 
 .App-logo {
@@ -20,13 +22,27 @@
 
 .title {
   background-color: #282c34;
-  height: 5vh;
+  height: 10vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
+
+  
+
+  &__image {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+  }
+}
+
+.footer {
+  background-color: #282c34;
+  height: 5vh;
+  width: 100%;
 }
 
 .App-link {

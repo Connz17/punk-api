@@ -7,6 +7,8 @@ import SortedMain from './Containers/SortedMain/SortedMain';
 import BeerInfo from './Containers/BeerInfo/BeerInfo';
 import DateSortedMain from './Containers/DateSortedMain/DateSortedMain';
 import ABVSortedMain from './Containers/ABVSortedMain/ABVSortedMain';
+import BottomBanner from './Components/BottomBanner/BottomBanner';
+import logo from "../src/assets/images/585e65d4cb11b227491c3409.png"
 
 function App() {
   const [beers, setBeers] = useState([])
@@ -42,9 +44,6 @@ function App() {
 
   const sortedPh = beerArr.sort((a, b) => b.ph - a.ph)
 
-  const sortedDate = beerArr.sort((a, b) => a.first_brewed - b.first_brewed)
-
-
 //User search input
   const handleInput = (event) => {
     const userInput = event.target.value.toLowerCase();
@@ -62,7 +61,7 @@ const searchedABV = sortedABV.filter((beer)=>{
   return beerName.includes(searchTerm);
 })
 
-const searchedBrewDate = sortedDate.filter((beer)=>{
+const searchedBrewDate = beerArr.filter((beer)=>{
   const beerName = beer.name.toLowerCase();
   return beerName.includes(searchTerm);
 })
@@ -98,7 +97,11 @@ const filteredDate = searchedBrewDate.filter((beer) => {
   return (
   <Router>
     <div className="App">
-      <Link to="/" className='title'>BrewDog</Link>
+      <div className='title'>
+        <Link to="/"><img className='title__image' src={logo} alt="" /></Link>
+        <h1 className='title__heading'>BrewDog</h1>
+        <Link to="/"><img className='title__image' src={logo} alt="" /></Link>
+      </div>
       <Nav beers={beers} handleInput={handleInput} searchTerm={searchTerm} searchedBeer={searchedBeer}/>
       <Routes>
       <Route path="/beer/:beerId"
@@ -126,6 +129,9 @@ const filteredDate = searchedBrewDate.filter((beer) => {
         <Main searchedBeer={searchedBeer}/> 
         }></Route>
       </Routes>
+      <footer className="footer">
+        <BottomBanner />
+      </footer>
     </div>
   </Router>
   );

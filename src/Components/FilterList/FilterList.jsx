@@ -11,17 +11,19 @@ import { Link } from "react-router-dom";
 
 const FilterList = ({toggleFilter}) => {
   return (
-    <div>
-      <Link to="/ABV">
-        <FilteredItem toggleFilter={toggleFilter} filterTerm={"ABV%"}/>
-      </Link>
+    <div className="sort-menu">    
+      <div className="sort-menu__content">
+        <Link to="/ABV">
+          <FilteredItem toggleFilter={toggleFilter} filterTerm={"ABV%"}/>
+        </Link>
 
-      <Link to="/pH">
-        <FilteredItem toggleFilter={toggleFilter} filterTerm={"pH"}/>
-      </Link>
-      <Link to="/brewed">
-        <FilteredItem toggleFilter={toggleFilter} filterTerm={"Brew Date"}/>
-      </Link>
+        <Link to="/pH">
+          <FilteredItem toggleFilter={toggleFilter} filterTerm={"pH"}/>
+        </Link>
+        <Link to="/brewed">
+          <FilteredItem toggleFilter={toggleFilter} filterTerm={"Brew Date"}/>
+        </Link>
+      </div>
     </div>
   )
 }
