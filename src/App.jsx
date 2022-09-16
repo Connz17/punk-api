@@ -8,7 +8,7 @@ import BeerInfo from './Containers/BeerInfo/BeerInfo';
 import DateSortedMain from './Containers/DateSortedMain/DateSortedMain';
 import ABVSortedMain from './Containers/ABVSortedMain/ABVSortedMain';
 import BottomBanner from './Components/BottomBanner/BottomBanner';
-import logo from "../src/assets/images/585e65d4cb11b227491c3409.png"
+import logo from "../src/assets/images/585e65d22.png"
 
 function App() {
   const [beers, setBeers] = useState([])
