@@ -21,7 +21,7 @@ const FilterList = ({toggleFilter}) => {
           <FilteredItem toggleFilter={toggleFilter} filterTerm={"pH"}/>
         </Link>
         <Link to="/brewed">
-          <FilteredItem toggleFilter={toggleFilter} filterTerm={"Brew Date"}/>
+          <FilteredItem toggleFilter={toggleFilter} filterTerm={"Classic Range"}/>
         </Link>
       </div>
     </div>

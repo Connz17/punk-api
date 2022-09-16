@@ -1,7 +1,7 @@
 import './App.scss';
 import Main from './Containers/Main/Main';
 import Nav from './Containers/Nav/Nav';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import SortedMain from './Containers/SortedMain/SortedMain';
 import BeerInfo from './Containers/BeerInfo/BeerInfo';
