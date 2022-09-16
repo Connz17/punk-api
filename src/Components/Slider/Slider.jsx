@@ -6,7 +6,7 @@ const Slider = ({getSliderValue}) => {
 
 
   return (
-    <input onChange={getSliderValue} type="range" min="0.1" max="7" step="0.1" value="3"/>
+    <input onChange={getSliderValue} type="range" min="0.1" max="7" step="0.1"/>
   )
 }
 
