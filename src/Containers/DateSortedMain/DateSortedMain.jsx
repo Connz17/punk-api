@@ -2,7 +2,6 @@ import "./DateSortedMain.scss";
 import "../Main/Main.scss";
 import SortedList from "../SortedList/SortedList";
 import React from 'react'
-import DateRangedSlider from "../../Components/DateRangedSlider/DateRangedSlider";
 
 
 

@@ -1,7 +1,6 @@
 import "./SearchBox.scss"
 
 import React from 'react'
-import SearchList from "../SearchList/SearchList"
 
 
 const SearchBox = ({handleInput}) => {
