@@ -42,9 +42,34 @@ After all project dependencies have been installed you can run npm run start to 
 
 Using the site
 
-### Homepage: https://github.com/
+### Landing Page
 
 <img src="./src/assets/images/Homepage.png"/>
+
+<img src="./src/assets/images/beer highlighted.png"/>
+
+### Search box
+
+<img src="./src/assets/images/searching beer.png"/>
+
+### Sort and/or filter options & pages
+
+<img src="./src/assets/images/Sort Options.png"/>
+
+
+#### AVB%
+
+<img src="./src/assets/images/ABV page.png"/>
+
+<img src="./src/assets/images/PH.png"/>
+<img src="./src/assets/images/classic range.png"/>
+
+
+### Single beer information page
+
+<img src="./src/assets/images/Beer info.png"/>
+
+
 
 
 
