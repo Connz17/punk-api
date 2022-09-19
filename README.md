@@ -42,7 +42,7 @@ After all project dependencies have been installed you can run npm run start to 
 
 Using the site
 
-### Landing Page
+### Landing Page 
 
 <img src="./src/assets/images/Homepage.png"/>
 
@@ -57,11 +57,15 @@ Using the site
 <img src="./src/assets/images/Sort Options.png"/>
 
 
-#### AVB%
+#### AVB percentage
 
 <img src="./src/assets/images/ABV page.png"/>
 
+#### pH
+
 <img src="./src/assets/images/PH.png"/>
+
+#### Classic range
 <img src="./src/assets/images/classic range.png"/>
 
 
