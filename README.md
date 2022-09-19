@@ -42,8 +42,13 @@ After all project dependencies have been installed you can run npm run start to 
 
 Using the site
 
+### Homepage: https://github.com/
 
-### Features of note
+<img src="./src/assets/images/Homepage.png"/>
+
+
+
+### `Features of note`
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
