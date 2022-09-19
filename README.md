@@ -44,8 +44,13 @@ Using the site
 
 ## 🚀 Future Scope <a name = "future_scope"></a>
 
-Write about what you could not develop during the course of the Hackathon; and about what your project can achieve
-in the future.
+The road-map for future features, fixes and developments are as follows:
+ <ul>
+    <li>Add IBU to the sort by and filter options</li>
+    <li>Add a dropdown card list of beers coming from the search box onFocus that would contain all available beer selections and narrow that list down based on user input</li>
+    <li>Add the ability to search based on food parings and year brewed</li>
+    <li>Add more navigation features. i.e. a button on the single beer page that would take you back home.</li>
+  </ul>
 
 ## Available Scripts <a name="available_scripts"></a>
 

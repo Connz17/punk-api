@@ -3,7 +3,7 @@ import "./Card.scss"
 import React from 'react'
 import { Link } from "react-router-dom"
 
-const Card = ({name, tag, pic, abv, date, ph, beer}) => {
+const Card = ({name, pic, abv, date, ph, beer}) => {
 
 
   return (
