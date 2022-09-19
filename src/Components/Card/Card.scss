@@ -1,9 +1,8 @@
 .beer-card {
-    background: rgb(112,90,238);
     width: 90%;
     height: 20rem;
     border-radius: 10px;
-
+    background-color: rgba(245, 245, 220, 0.3);
 } 
 
 h2{
@@ -28,7 +27,9 @@ h2{
     }
 
 .beer-card:hover {
-    background-color: rgba(213, 1, 255, 0.6);
+    background-color: rgba(204, 109, 223, 0.6);
+    border: solid .3rem green;
+
 }
 
 
