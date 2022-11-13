@@ -1,18 +1,19 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+ <img width=200px height=200px src="./src/assets/images/585e65d22.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">punk-api</h3>
 
 
-<p align= "center"> This is my Punk API react project where you're able to see a collection of beers from BrewDog, sort, filter and search for a specific beer or one that meets your preference regarding ABV percentage, pH amounts and date brewed. 
+<p align= "center"> This is my Punk API react project where you're able to see a collection of beers from BrewDog, sort, filter and search for a specific beer or one that meets your preference regarding ABV percentage, pH amounts and date brewed criteria. 
     <br> 
 </p>
 
 ## 📝 Table of Contents
 
 - [Getting Started](#getting_started)
+- [Running the tests](#tests)
 - [Deployment](#deployment)
 - [Usage](#usage)
 - [Future Scope](#future_scope)
@@ -40,39 +41,48 @@ After all project dependencies have been installed you can run npm run start to 
 
 ## 🎈 Usage <a name="usage"></a>
 
-Using the site
+The webpage was made using React and SCSS.
+You can access the webpage <a href="https://connz17.github.io/punk-api/">HERE.</a>
 
 ### Landing Page 
 
+Once on the home page you can look through the whole collation of beers from brew dog with cards for each beer containing some basic information.
 <img src="./src/assets/images/Homepage.png"/>
 
+ 
+Hovering over a beer will highlight that selection.
 <img src="./src/assets/images/beer highlighted.png"/>
+
+
 
 ### Search box
 
+There is search functionality utilized by typing in the search bar to filter through specific beer names. The beers displayed on page will reduce in number to only those that meet the criteria typed.
 <img src="./src/assets/images/searching beer.png"/>
 
 ### Sort and/or filter options & pages
 
+There is a menu that you can access to specifically order the results based on set criteria.
 <img src="./src/assets/images/Sort Options.png"/>
 
 
 #### AVB percentage
 
+This page orders the beers shown based on their ABV percentage. You can change the minimum percentage by using the slider.
 <img src="./src/assets/images/ABV page.png"/>
 
 #### pH
-
+This page orders the beers shown based on their pH. You can change the minimum pH by using the slider.
 <img src="./src/assets/images/PH.png"/>
 
 #### Classic range
+This page shows all the beers brewed before 2010
 <img src="./src/assets/images/classic range.png"/>
 
 
 ### Single beer information page
-
+This page shows more information about a selected beer including a description and tips.
 <img src="./src/assets/images/Beer info.png"/>
-
 
 
 

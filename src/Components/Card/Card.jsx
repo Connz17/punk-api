@@ -18,7 +18,6 @@ const Card = ({name, pic, abv, date, ph, beer}) => {
         <h5>{ph} pH</h5>
       </div>
       
-
     </div>
   )
 }
