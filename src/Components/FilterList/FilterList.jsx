@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const FilterList = ({toggleFilter}) => {
   return (
-    <div className="sort-menu">    
+    <div className="sort-menu"> <br />   
       <FaIcons.FaRegWindowClose onClick={toggleFilter} className="menu-icon"/>
       <div className="sort-menu__content">
         <Link className="menu-link" to="/ABV">

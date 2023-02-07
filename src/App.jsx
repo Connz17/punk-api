@@ -100,9 +100,7 @@ const filteredDate = searchedBrewDate.filter((beer) => {
     <div className="App">
       <div className='title'>
         <Link to="/"><img className='title__image' src={logo} alt="" /></Link>
-        <h1 className='title__heading'>BrewDog</h1>
-        <Link to="/"><img className='title__image' src={logo} alt="" /></Link>
-      </div>
+      </div><br />
       <Nav beers={beers} handleInput={handleInput} searchTerm={searchTerm} searchedBeer={searchedBeer}/>
       <Routes>
       <Route path="/beer/:beerId"

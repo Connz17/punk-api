@@ -1,5 +1,6 @@
 import "./BeerInfo.scss"
 import React from 'react'
+import * as IoIcons from 'react-icons/io'
 import { useParams } from "react-router";
 
 const BeerInfo = ({beers}) => {
@@ -9,8 +10,15 @@ console.log(beerId);
 
 const clickedBeer = beers.filter((beer) => beer.id == beerId)
   
-console.log(clickedBeer[0].id);
+console.log(clickedBeer[0].food_pairing);
 
+  const foodParingJSX = clickedBeer[0].food_pairing.map((food, index)=> {
+    return (
+      <li key={index}>{food}</li>
+    )
+  } )
+
+  console.log({foodParingJSX});
 
 
 
@@ -21,8 +29,8 @@ console.log(clickedBeer[0].id);
         <h2>Beer Tips:</h2>
           <h3>Brewers tips</h3>
           <p>{clickedBeer[0].brewers_tips}</p><br />
-          <h3>Goes great with these foods:</h3>
-          <p>{clickedBeer[0].food_pairing.join(". ")}</p><br />
+          <ul>Goes great with these foods:</ul>
+            {foodParingJSX} <br />
           <h2>Beer Info:</h2>
           <p>ABV: {clickedBeer[0].abv}%</p>
           <p>pH: {clickedBeer[0].ph}</p>
