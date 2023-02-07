@@ -6,3 +6,19 @@
     display: flex;
     justify-content: space-between;
 }
+
+.filter-options {
+    cursor: pointer;
+    height: 4rem;
+    width: 10rem;
+    background: lightsteelblue;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background: lightcyan;
+        border: 3px solid green;
+    }
+}

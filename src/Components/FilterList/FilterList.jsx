@@ -1,5 +1,5 @@
 import "./FilterList.scss";
-
+import * as FaIcons from 'react-icons/fa'
 import React from 'react'
 import FilteredItem from "../FilteredItem/FilteredItem";
 import { Link } from "react-router-dom";
@@ -12,15 +12,16 @@ import { Link } from "react-router-dom";
 const FilterList = ({toggleFilter}) => {
   return (
     <div className="sort-menu">    
+      <FaIcons.FaRegWindowClose onClick={toggleFilter} className="menu-icon"/>
       <div className="sort-menu__content">
-        <Link to="/ABV">
+        <Link className="menu-link" to="/ABV">
           <FilteredItem toggleFilter={toggleFilter} filterTerm={"ABV%"}/>
         </Link>
 
-        <Link to="/pH">
+        <Link className="menu-link"  to="/pH">
           <FilteredItem toggleFilter={toggleFilter} filterTerm={"pH"}/>
         </Link>
-        <Link to="/brewed">
+        <Link className="menu-link"  to="/brewed">
           <FilteredItem toggleFilter={toggleFilter} filterTerm={"Classic Range"}/>
         </Link>
       </div>
