@@ -9,7 +9,7 @@ const SortedList = ({beers}) => {
 const sortedJSX = beers.map((beer, index)=> {
     return (
         <div key={index}>
-            <Card beer={beer} name={beer.name} tag={beer.tagline} pic={beer.image_url} food={beer.food_pairing.join(". ")} abv={beer.abv} date={beer.first_brewed} ph={beer.ph}/>
+            <Card beer={beer} name={beer.name} tag={beer.tagline} pic={beer.image_url} food={beer.food_pairing.join(". ")} abv={beer.abv} ibu={beer.ibu} ph={beer.ph}/>
         </div>
         )
     })

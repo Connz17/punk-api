@@ -1,6 +1,5 @@
 import "./BeerInfo.scss"
 import React from 'react'
-import * as IoIcons from 'react-icons/io'
 import { useParams } from "react-router";
 
 const BeerInfo = ({beers}) => {
@@ -45,7 +44,9 @@ console.log(clickedBeer[0].food_pairing);
     </div>
     <div className="info">
       <h2>Beer description</h2>
-      <p>{clickedBeer[0].description}</p> 
+      <p>{clickedBeer[0].description}</p><br />
+      <h2>First Brewed:</h2>
+      <p>{clickedBeer[0].first_brewed}</p>
     </div>
   </section>
     </>

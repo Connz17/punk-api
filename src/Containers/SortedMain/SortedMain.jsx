@@ -1,5 +1,4 @@
 import "./SortedMain.scss";
-import "../Main/Main.scss";
 import SortedList from "../SortedList/SortedList";
 import React from 'react'
 import Slider from "../../Components/Slider/Slider";

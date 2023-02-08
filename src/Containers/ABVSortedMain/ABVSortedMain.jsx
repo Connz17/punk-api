@@ -1,5 +1,4 @@
 import "./ABVSortedMain.scss";
-import "../Main/Main.scss";
 import SortedList from "../SortedList/SortedList";
 import React from 'react'
 import ABVRangedSlider from "../../Components/ABVRangedSlider/ABVRangedSlider";

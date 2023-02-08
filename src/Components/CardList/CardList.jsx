@@ -9,7 +9,7 @@ const CardList = ({searchedBeer}) => {
   const cardJSX = searchedBeer.map((beer, index)=> {
     return (
       <div key={index}>
-        <Card beer={beer} ph={beer.ph} name={beer.name} tag={beer.tagline} pic={beer.image_url} abv={beer.abv} ibu={beer.ibu}/>
+        <Card beer={beer} ph={beer.ph} name={beer.name} tag={beer.tagline} pic={beer.image_url} abv={beer.abv} ibu={beer.ibu} food={beer.food_pairing.join(". ")}/>
       </div>
        
     )

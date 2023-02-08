@@ -16,15 +16,19 @@
     transition: all .5s ease-in-out;
     background-color: #3d74bd;
     padding-right: 40px;
-    color:#fff;
+    color:#ffffff;
     box-shadow: 3px 3px 5px;
-    
   }
+
   .input-search::placeholder{
     color:rgba(255,255,255,.5);
     font-size: 18px;
     letter-spacing: 2px;
     font-weight: 100;
+  }
+
+  .input-search:hover{
+    background-color: powderblue;
   }
 
   .input-search:focus{

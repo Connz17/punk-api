@@ -3,8 +3,9 @@ import "./Card.scss"
 import React from 'react'
 import { Link } from "react-router-dom"
 
-const Card = ({name, pic, abv, date, ph, beer}) => {
+const Card = ({name, pic, abv, ibu, ph, beer}) => {
 
+  console.log({ibu});
 
   return (
     <div className="beer-card">
@@ -14,7 +15,7 @@ const Card = ({name, pic, abv, date, ph, beer}) => {
       </Link> <br />
       <div className="beer__info">
         <h5>{abv}%</h5>
-        <h5>Brewed {date}</h5>
+        <h5>IBU {ibu}</h5>
         <h5>{ph} pH</h5>
       </div>
       

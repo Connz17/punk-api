@@ -17,7 +17,9 @@ const FilterList = ({toggleFilter}) => {
         <Link className="menu-link" to="/ABV">
           <FilteredItem toggleFilter={toggleFilter} filterTerm={"ABV%"}/>
         </Link>
-
+        <Link className="menu-link" to="/IBU">
+          <FilteredItem toggleFilter={toggleFilter} filterTerm={"IBU"}/>
+        </Link>
         <Link className="menu-link"  to="/pH">
           <FilteredItem toggleFilter={toggleFilter} filterTerm={"pH"}/>
         </Link>
