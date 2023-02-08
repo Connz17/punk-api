@@ -3,21 +3,23 @@
     margin: auto;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 
 .filter-options {
     cursor: pointer;
     height: 4rem;
     width: 10rem;
-    background: lightsteelblue;
+    background: #282c34;
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #ffffff;
 
     &:hover {
         background: lightcyan;
         box-shadow: #ffffff 3px 3px 5px;
+        color: #282c34;
     }
 }

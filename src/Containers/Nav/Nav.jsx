@@ -14,7 +14,6 @@ const Nav = ({handleInput, searchedBeer}) => {
 
     const toggleFilter = () => {
         setShowFilter(!showFilter);
-        console.log("click");
       };
     
 
@@ -25,8 +24,8 @@ const Nav = ({handleInput, searchedBeer}) => {
         <SearchBox handleInput={handleInput} searchedBeer={searchedBeer}/>
     </div>
     
-        <h2 className="filter-options" onClick={toggleFilter} >Sort Options:</h2>
-        {showFilter && <FilterList toggleFilter={toggleFilter}/>}
+        <h2 className="filter-options" onClick={toggleFilter} >Sort By:</h2>
+        <FilterList toggleFilter={toggleFilter} showFilter={showFilter}/>
     
     </div>
   )

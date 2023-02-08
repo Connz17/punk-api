@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 //abv_gt	number	Returns all beers with ABV greater than the supplied number
 //brewed_after	date	Returns all beers brewed after this date, the date format is mm-yyyy e.g 10-2011
 
-const FilterList = ({toggleFilter}) => {
+const FilterList = ({toggleFilter, showFilter}) => {
   return (
-    <div className="sort-menu"> <br />   
+    <div className={ showFilter ? "sort-menu active" : "sort-menu"}> <br />   
       <FaIcons.FaRegWindowClose onClick={toggleFilter} className="menu-icon"/>
       <div className="sort-menu__content">
         <Link className="menu-link" to="/ABV">
