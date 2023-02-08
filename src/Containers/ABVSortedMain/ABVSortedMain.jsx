@@ -8,7 +8,7 @@ import ABVRangedSlider from "../../Components/ABVRangedSlider/ABVRangedSlider";
 
 const ABVSortedMain = ({beers, getSliderValue, sliderValue, term}) => {
   return (
-    <div className="main">
+    <div className="abv-main">
         <h3>Currently showing {term}{sliderValue}% and above</h3>
         <ABVRangedSlider getSliderValue={getSliderValue}/>
         <SortedList beers={beers}/>

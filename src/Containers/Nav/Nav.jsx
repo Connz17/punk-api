@@ -5,7 +5,7 @@ import SearchBox from "../../Components/SearchBox/SearchBox";
 import FilterList from "../../Components/FilterList/FilterList";
 
 
-const Nav = ({beers, handleInput, searchedBeer}) => {
+const Nav = ({handleInput, searchedBeer}) => {
     const [showFilter, setShowFilter] = useState(false);
 
 

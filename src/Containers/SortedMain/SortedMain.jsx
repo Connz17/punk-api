@@ -8,7 +8,7 @@ import Slider from "../../Components/Slider/Slider";
 
 const SortedMain = ({beers, getSliderValue, sliderValue, term,}) => {
   return (
-    <div className="main">
+    <div className="ph-main">
         <h3>Currently showing {term}{sliderValue} and below</h3>
         <Slider getSliderValue={getSliderValue}/>
         <SortedList beers={beers}/>
