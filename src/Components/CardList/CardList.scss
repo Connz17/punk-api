@@ -3,3 +3,14 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 1.3rem;
 }
+
+@media only screen and (max-width: 992px) {
+    //max width is 992 and everything down
+    
+    }
+    
+  @media only screen and (max-width: 600px) {
+    .card-container{
+        grid-template-columns: 1fr 1fr;
+    }
+    }

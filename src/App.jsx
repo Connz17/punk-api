@@ -35,7 +35,6 @@ function App() {
 
 // filter out beers with no image
   const beerArr = beers.filter((drink)=> drink.image_url)
-  console.log(beerArr);
 
 //Sort beers by value
   const sortedABV = beerArr.sort((a, b) => b.abv - a.abv)

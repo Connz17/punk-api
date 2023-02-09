@@ -8,7 +8,7 @@ const Card = ({name, pic, abv, ibu, ph, beer}) => {
 
   return (
     <div className="beer-card">
-      <h2>{name}</h2> <br />
+      <h2 className="beer-name">{name}</h2> <br />
       <Link to={`/beer/${beer.id}`}>  
         <img className="beer__image" src={pic} alt={name}/>
       </Link> <br />

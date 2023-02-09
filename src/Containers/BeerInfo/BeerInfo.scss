@@ -1,6 +1,5 @@
 .beer-page{
     margin-left: 1rem;
-    // margin-right: 1rem;
     display: flex;
     height: 85.7vh;
     overflow-y: scroll;
@@ -10,12 +9,14 @@
 .tips {
     background-color: rgba(245, 245, 220, 0.3);
     height: fit-content;
-    width: 33%;
+    width: 33.3%;
+    padding: 0.5rem;
+
 }
 
 .choice {
     margin: 1rem;
-    width: 33%;
+    width: 33.3%;
 
     &__image{
         height: 70%;
@@ -25,7 +26,8 @@
 .info {
     background-color:rgba(245, 245, 220, 0.3);
     height: fit-content;
-    width: 33%;
+    width: 33.3%;
+    padding: 0.5rem;
 }
 
 .tag {
@@ -44,3 +46,32 @@ ul {
     position: absolute;
     top: 847px;
 }
+
+@media only screen and (max-width: 992px) {
+    //max width is 992 and everything down
+    .choice {
+        margin: 1rem;
+        width: 33.3%;
+    
+        &__image{
+            height: 40%;
+        }
+    }
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .choice {
+            margin: 1rem;
+            width: 33.3%;
+
+            &__name {
+                margin: 0px 10px;
+            }
+        
+            &__image{
+                height: 30%;
+            }
+        }
+
+
+    }

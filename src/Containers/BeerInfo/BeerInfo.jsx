@@ -5,7 +5,6 @@ import { useParams } from "react-router";
 const BeerInfo = ({beers}) => {
 
 const {beerId} = useParams();
-console.log(beerId);
 
 const clickedBeer = beers.filter((beer) => beer.id == beerId)
   
@@ -35,7 +34,7 @@ const clickedBeer = beers.filter((beer) => beer.id == beerId)
           <p>SRM: {clickedBeer[0].srm}</p>
     </div>
     <div className="choice">
-      <h1>{clickedBeer[0].name}</h1><br />
+      <h1 className="choice__name">{clickedBeer[0].name}</h1><br />
       <h3 className="tag">{clickedBeer[0].tagline}</h3><br />
       <img className="choice__image" src={clickedBeer[0].image_url} alt="" />
       

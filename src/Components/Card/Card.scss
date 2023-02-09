@@ -40,3 +40,18 @@ h2{
 }
 
 
+@media only screen and (max-width: 992px) {
+    //max width is 992 and everything down
+    .beer__info{
+        display: none;
+    }
+
+    .beer-name{
+        margin: 0px 15px;
+    }
+
+    }
+    
+  @media only screen and (max-width: 600px) {
+    
+    }

@@ -11,8 +11,8 @@ const SearchBox = ({handleInput}) => {
 
   return (
   <>
-  <div class="search-box">
-    <input onInput={handleInput} type="text" class="input-search" placeholder="Search..."/>
+  <div className="search-box">
+    <input onInput={handleInput} type="text" className="input-search" placeholder="Search..."/>
   </div>
   </>
   )
