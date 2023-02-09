@@ -45,7 +45,6 @@ The webpage was made using React and SCSS.
 You can access the webpage <a href="https://connz17.github.io/punk-api/">HERE.</a>
 
 ### Landing Page 
-
 Once on the home page you can look through the whole collation of beers from brew dog with cards for each beer containing some basic information.
 <img src="./src/assets/images/Homepage.png"/>
 
@@ -56,20 +55,23 @@ Hovering over a beer will highlight that selection.
 
 
 ### Search box
-
 There is search functionality utilized by typing in the search bar to filter through specific beer names. The beers displayed on page will reduce in number to only those that meet the criteria typed.
 <img src="./src/assets/images/searching beer.png"/>
 
 ### Sort and/or filter options & pages
-
 There is a menu that you can access to specifically order the results based on set criteria.
 <img src="./src/assets/images/Sort Options.png"/>
 
 
 #### AVB percentage
-
 This page orders the beers shown based on their ABV percentage. You can change the minimum percentage by using the slider.
 <img src="./src/assets/images/ABV page.png"/>
+
+
+#### IBU
+This page orders the beers shown based on their IBU rating. You can change the IBU by using the slider.
+<img src="./src/assets/images/IBU page.png"/>
+
 
 #### pH
 This page orders the beers shown based on their pH. You can change the minimum pH by using the slider.
@@ -93,10 +95,9 @@ This page shows more information about a selected beer including a description a
 
 The road-map for future features, fixes and developments are as follows:
  <ul>
-    <li>Add IBU to the sort by and filter options</li>
+    <li>Add user feedback for no beers shown</li>
     <li>Add a dropdown card list of beers coming from the search box onFocus that would contain all available beer selections and narrow that list down based on user input</li>
-    <li>Add the ability to search based on food parings and year brewed</li>
-    <li>Add more navigation features. i.e. a button on the single beer page that would take you back home. And an 'X' button to close the sort by options window.</li>
+    <li>Add the ability for filters to all work together</li>
   </ul>
 
 ## Available Scripts <a name="available_scripts"></a>
@@ -104,7 +105,6 @@ The road-map for future features, fixes and developments are as follows:
 In the project directory, you can run: 
 
 ### `npm start`
-
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
@@ -112,7 +112,6 @@ The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
 ### `npm test`
-
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
