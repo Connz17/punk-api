@@ -5,7 +5,6 @@ import { Link } from "react-router-dom"
 
 const Card = ({name, pic, abv, ibu, ph, beer}) => {
 
-  console.log({ibu});
 
   return (
     <div className="beer-card">

@@ -9,15 +9,13 @@ console.log(beerId);
 
 const clickedBeer = beers.filter((beer) => beer.id == beerId)
   
-console.log(clickedBeer[0].food_pairing);
 
   const foodParingJSX = clickedBeer[0].food_pairing.map((food, index)=> {
     return (
       <li key={index}>{food}</li>
     )
-  } )
+  })
 
-  console.log({foodParingJSX});
 
 
 

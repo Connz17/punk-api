@@ -33,6 +33,10 @@
   width: 2rem;
   height: auto;
   color: darkgrey;
+
+  &:hover {
+    color: red;
+  }
 }
 
 .menu-link {

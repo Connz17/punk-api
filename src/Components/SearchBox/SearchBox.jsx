@@ -20,4 +20,3 @@ const SearchBox = ({handleInput}) => {
 
 export default SearchBox
 
-// onInput={handleInput} placeholder="Beer name..."

@@ -1,6 +1,5 @@
 import './App.scss';
 import Main from './Containers/Main/Main';
-import Nav from './Containers/Nav/Nav';
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import SortedMain from './Containers/SortedMain/SortedMain';
@@ -20,10 +19,7 @@ function App() {
   const [phValue, setPhValue] = useState(3);
 
 
-
-
   const allBeers = async () => {
-
     let beerArray = [];
     for (let index = 1; index < 6; index++) {
       const res = await fetch(`https://api.punkapi.com/v2/beers?page=${index}&per_page=80`);
@@ -43,9 +39,7 @@ function App() {
 
 //Sort beers by value
   const sortedABV = beerArr.sort((a, b) => b.abv - a.abv)
-
   const sortedPh = beerArr.sort((a, b) => b.ph - a.ph)
-
   const sortedIBU = beerArr.sort((a, b) => a.ibu - b.ibu)
 
 //User search input
@@ -56,24 +50,12 @@ function App() {
 
 // turn the search functions into one pure function that takes variables as arguments
 const searchedBeer = beerArr.filter((beer)=>{
+  const foodPairings = beer.food_pairing.join()
   const beerName = beer.name.toLowerCase();
-  return beerName.includes(searchTerm);
+  const yearBrewed = beer.first_brewed.substring(beer.first_brewed.length -4)
+  return beerName.includes(searchTerm) || foodPairings.includes(searchTerm) || yearBrewed.includes(searchTerm);
 })
 
-// const searchedABV = sortedABV.filter((beer)=>{
-//   const beerName = beer.name.toLowerCase();
-//   return beerName.includes(searchTerm);
-// })
-
-// const searchedBrewDate = beerArr.filter((beer)=>{
-//   const beerName = beer.name.toLowerCase();
-//   return beerName.includes(searchTerm);
-// })
-
-// const searchedPh = sortedPh.filter((beer)=>{
-//   const beerName = beer.name.toLowerCase();
-//   return beerName.includes(searchTerm);
-// })
 
 //Set slider values
 const getAbvValue = (event) => {
