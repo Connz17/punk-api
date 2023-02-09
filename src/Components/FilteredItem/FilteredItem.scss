@@ -6,6 +6,10 @@
     font-size: larger;
 }
 
-.close-icon {
-    //color: darkgrey;
+.option {
+    
+    &:hover {
+        text-decoration: dotted white;
+        text-decoration-line: underline;
+    }
 }
